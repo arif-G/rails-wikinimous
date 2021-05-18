@@ -1,0 +1,7 @@
+<%= form_for article, html: {class: "flex flex-col items-stretch"} do |f| %>
+  <%= f.label :title, class: "text-gray-600 font-thin " %>
+  <%= f.text_field :title, class: "text-gray-800 font-thin text-xl bg-gray-100 p-3  m-3 "  %>
+  <%= f.label :content, class: "text-gray-600 font-thin  " %>
+  <%= f.text_area :content, class: "text-gray-800 font-thin text-xl bg-gray-100 p-3  m-3 "  %>
+  <%= f.submit class: "text-gray-800 font-thin text-xl bg-gray-100 p-3 m-3 cursor-pointer "  %>
+<% end %>

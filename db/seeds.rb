@@ -9,7 +9,7 @@ require 'faker'
 
 10.times do
   title = Faker::Hacker.say_something_smart
-  content = Faker::Lorem.paragraphs
+  content = Faker::Lorem.paragraph(sentence_count: 100)
   article = Article.new({ title: title, content: content })
   article.save
 end

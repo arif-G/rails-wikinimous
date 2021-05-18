@@ -1,0 +1,10 @@
+<ul class="space-y-4">
+  <% @articles.each do |article| %>
+    <li>
+      <h2 class="text-gray-800 tracking-wide"><%= link_to article.title, article_path(article)%></h2>
+      <p class="text-gray-600"><%=h truncate(article.content, length: 80) %></p>
+    </li>
+
+  <% end %>
+</ul>
+

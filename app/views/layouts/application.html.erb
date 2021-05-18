@@ -8,9 +8,17 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag "application", "data-turbo-track": "reload" %>
   </head>
 
-  <body>
+  <body class="flex flex-col items-center">
+    <header class="flex text-xl flex-row justify-between align-baseline w-full p-1 text-gray-800 ">
+    <div class="p-1"> <%= link_to "📓 wikiwiki", articles_path, class: ' hover:scale-105 transition'%></div>
+    <%= link_to "New Article", new_article_path, class: 'p-1 text-gray-600 hover:text-purple-800 hover:font-bold transition'%>
+    </header>
+    <div class="flex flex-col m-3 w-full max-w-7xl p-3">
     <%= yield %>
+    </div>
+
   </body>
 </html>
